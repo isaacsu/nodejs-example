@@ -3,7 +3,7 @@ common:
       buildkite/zstash:
         ids: "js-cache" # comma seperated list of caches
 
-image: "sorchaabel/nodejs-pipeline-example:1.0"
+# image: "sorchaabel/nodejs-pipeline-example:1.0"
 steps:
   - name: ":node:"
     command: |
