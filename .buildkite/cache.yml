@@ -1,6 +1,6 @@
 # .buildkite/cache.yml
 dependencies:
-  - id: "js-cache"
+  - id: "js_cache"
     key: "{{ id }}-{{ agent.os }}-{{ agent.arch }}-{{ checksum \"package-lock.json\" }}"
     fallback_keys":
       - "{{ id }}-{{ agent.os }}-{{ agent.arch }}-"
