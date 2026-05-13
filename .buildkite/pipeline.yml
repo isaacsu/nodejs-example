@@ -7,6 +7,8 @@ image: "sorchaabel/nodejs-pipeline-example:1.0"
 steps:
   - name: ":node:"
     command: |
+      "/opt/homebrew/bin/buildkite-agent cache restore"
       "npm install"
+      "/opt/homebrew/bin/buildkite-agent cache save"
       "npm test"
-    plugins: [*buildkite-cache]
+    # plugins: [*buildkite-cache]
