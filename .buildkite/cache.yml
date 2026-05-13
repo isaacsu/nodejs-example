@@ -1,0 +1,4 @@
+# .buildkite/cache.yml
+caches:
+	- id: "js-cache"
+		template: "node-npm"
