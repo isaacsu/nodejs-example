@@ -1,4 +1,9 @@
 # .buildkite/cache.yml
-caches:
+dependencies:
   - id: "js-cache"
-    template: "node-npm"
+    key: "{{ id }}-{{ agent.os }}-{{ agent.arch }}-{{ checksum \"package-lock.json\" }}"
+    fallback_keys":
+      - "{{ id }}-{{ agent.os }}-{{ agent.arch }}-"
+      - "{{ id }}-"
+    paths:
+      - "node_modules"
